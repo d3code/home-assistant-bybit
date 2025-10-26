@@ -11,6 +11,5 @@
     "@d3code"
   ],
   "iot_class": "cloud_polling",
-  "integration_type": "hub",
-  "icon": "https://raw.githubusercontent.com/d3code/home-assistant-bybit/main/icon.png"
+  "integration_type": "hub"
 }
