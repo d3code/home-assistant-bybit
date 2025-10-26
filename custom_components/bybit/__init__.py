@@ -13,6 +13,9 @@ import websockets
 
 from .const import BYBIT_WS_URL, DOMAIN
 
+# Import SSL for secure websocket connections
+import ssl
+
 _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS: list[str] = ["sensor"]
@@ -92,7 +95,11 @@ class BybitDataUpdateCoordinator(DataUpdateCoordinator):
             try:
                 _LOGGER.info("Connecting to Bybit WebSocket...")
                 
-                async with websockets.connect(BYBIT_WS_URL) as websocket:
+                # Create SSL context in executor to avoid blocking
+                loop = asyncio.get_event_loop()
+                ssl_context = await loop.run_in_executor(None, ssl.create_default_context)
+                
+                async with websockets.connect(BYBIT_WS_URL, ssl=ssl_context) as websocket:
                     self.websocket = websocket
                     
                     # Subscribe to tickers for all symbols
