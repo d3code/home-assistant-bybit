@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Bybit Integration",
+        "description": "Enter the trading pairs you want to monitor (comma-separated, e.g., BTCUSDT,ETHUSDT)",
+        "data": {
+          "symbols": "Trading Pairs"
+        }
+      }
+    },
+    "error": {
+      "invalid_symbols": "Invalid trading pair format. Please use format like BTCUSDT, ETHUSDT"
+    },
+    "abort": {
+      "already_configured": "Integration is already configured"
+    }
+  }
+}
