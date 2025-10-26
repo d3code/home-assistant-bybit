@@ -99,7 +99,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.next_version.outputs.new_version }}
-          release_name: Release ${{ steps.next_version.outputs.new_version }}
+          release_name: ${{ steps.next_version.outputs.new_version }}
           body: ${{ steps.changelog.outputs.changelog }}
           draft: false
           prerelease: false
