@@ -1,7 +1,7 @@
 {
   "domain": "bybit",
   "name": "Bybit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "config_flow": true,
   "documentation": "https://github.com/d3code/home-assistant-bybit",
   "requirements": [
