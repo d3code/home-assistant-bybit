@@ -1,0 +1,51 @@
+---
+alwaysApply: true
+---
+
+# No Automatic Git Operations
+
+## Git Operations Policy
+- **Never add files** to git staging without explicit instruction
+- **Never commit changes** without explicit instruction
+- **Never push changes** without explicit instruction
+- **Never create branches** without explicit instruction
+- **Never merge branches** without explicit instruction
+
+## Required Explicit Instructions
+Before performing any git operation, the user must explicitly request it:
+- "Please commit these changes"
+- "Add this file to git"
+- "Push to remote"
+- "Create a new branch"
+- "Merge this branch"
+
+## Allowed Operations
+- **Read-only operations**: `git status`, `git log`, `git diff`, `git show`
+- **Information gathering**: `git branch`, `git remote`, `git tag`
+- **Safe operations**: `git help`, `git config --list`
+
+## Examples
+
+### ❌ Avoid
+```bash
+# Don't do these automatically
+git add .
+git commit -m "fix: update code"
+git push origin main
+git checkout -b new-feature
+```
+
+### ✅ Correct
+```bash
+# Only do these when explicitly requested
+git status  # OK - read-only
+git diff    # OK - read-only
+git log --oneline  # OK - read-only
+```
+
+## Rationale
+- **User Control**: Ensures user maintains full control over their repository
+- **Prevents Accidents**: Avoids unintended commits or pushes
+- **Explicit Intent**: Requires clear user intention for all git operations
+- **Safety**: Protects against accidental data loss or unwanted changes
+- **Professional Practice**: Follows best practices for collaborative development

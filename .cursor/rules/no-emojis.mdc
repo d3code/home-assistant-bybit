@@ -1,0 +1,39 @@
+---
+alwaysApply: true
+---
+
+# No Emojis or Non-Text Characters
+
+## Code Standards
+- **No emojis** in code, comments, or strings
+- **No Unicode symbols** (arrows, bullets, checkmarks, etc.)
+- **No special characters** beyond standard ASCII
+- Use plain text descriptions instead of visual symbols
+
+## Allowed Characters
+- Standard ASCII letters, numbers, and punctuation
+- Standard programming symbols: `{}[]()<>+-*/=!&|^~`
+- Standard whitespace: spaces, tabs, newlines
+
+## Examples
+
+### ❌ Avoid
+```javascript
+const message = "✅ Success!" // No emojis
+const status = "🚀 Loading..." // No emojis
+// ✨ This is a comment with emoji // No emojis
+```
+
+### ✅ Correct
+```javascript
+const message = "Success!" // Plain text
+const status = "Loading..." // Plain text
+// This is a comment without emoji // Plain text
+```
+
+## Rationale
+- Ensures code readability across all systems and terminals
+- Prevents encoding issues in different environments
+- Maintains professional code standards
+- Improves accessibility for screen readers
+- Reduces potential issues with version control systems

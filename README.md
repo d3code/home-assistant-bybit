@@ -2,6 +2,9 @@
 
 A Home Assistant custom integration to monitor cryptocurrency ticker data from Bybit using their public WebSocket API.
 
+[![GitHub release](https://img.shields.io/github/release/d3code/home-assistant-bybit.svg)](https://github.com/d3code/home-assistant-bybit/releases)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
+
 ## Features
 
 - Real-time cryptocurrency price monitoring via WebSocket
@@ -13,6 +16,7 @@ A Home Assistant custom integration to monitor cryptocurrency ticker data from B
   - Open Interest
 - Automatic reconnection handling
 - UI-based configuration through Home Assistant
+- Full precision support (up to 8 decimal places)
 
 ## Installation
 
@@ -23,7 +27,7 @@ A Home Assistant custom integration to monitor cryptocurrency ticker data from B
 3. Click on the three dots in the top right corner
 4. Select "Custom repositories"
 5. Add this repository:
-   - Repository: `https://github.com/yourusername/home-assistant-bybit`
+   - Repository: `https://github.com/d3code/home-assistant-bybit`
    - Category: Integration
 6. Click "Add"
 7. In the Integrations screen, search for "Bybit"

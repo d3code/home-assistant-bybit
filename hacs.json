@@ -1,0 +1,9 @@
+{
+  "name": "Bybit",
+  "content_in_root": false,
+  "filename": "bybit",
+  "country": ["US", "GB", "CA", "AU"],
+  "homeassistant": "2023.1.0",
+  "render_readme": true,
+  "iot_class": "Cloud Polling"
+}
